@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>Возчиков Сергей – UX/UI Designer</title>
     <link rel="stylesheet" href="style/css/reset.css">
     <link rel="stylesheet" href="style/css/style.css">
@@ -24,9 +25,18 @@
             <a href="#work" class="block__link block__link--work">
                 <span class="block__link--square"></span>
                 <span>Мои работы</span></a>
+            <a href="#clients" class="block__link block__link--clients">
+                <span class="block__link--square"></span>
+                <span>Мои клиенты</span></a>
+            <a href="#contact" class="block__link block__link--contact">
+                <span class="block__link--square"></span>
+                <span>Мои контакты</span></a>
+            <a href="#header" class="block__link block__link--top">
+                <span class="block__link--inner"></span>
+                <span>На верх</span></a>
         </div>
     </div>
-    <header class="header">
+    <header class="header" id="header">
         <div class="content-container">
             <div class="content-row header__heading">
 
@@ -38,7 +48,7 @@
                         <a class="header__link" href="#work">работы</a>
                     </li>
                     <li class="header__item">
-                        <a class="header__link" href="#">контакты</a>
+                        <a class="header__link" href="#contact">контакты</a>
                     </li>
                 </ul>
             </div>
@@ -98,7 +108,7 @@
             </ul>
         </div>
     </section>
-    <section class="clients">
+    <section class="clients" id="clients">
         <div class="work__box clients__box">
             <p class="work__paragraph">
                 <span class="work__name">КЛИЕНТЫ</span>
@@ -115,63 +125,69 @@
         </div>
         <div class="content-container">
             <div class="clients__line">
-                <div class="content-row clients__element">
+                <div class="content-row clients__element clients__element--one">
                     <div class="clients__picture--sber">
-                        <img src="img/Sberbank.png" alt="" class="clients__image">
+                        <img src="img/Sberbank.png" alt="Сбербанк" class="clients__image">
                     </div>
                     <div class="clients__picture--sibur">
-                        <img src="img/Sibur.png" alt="" class="clients__image">
+                        <img src="img/Sibur.png" alt="Сибур" class="clients__image">
                     </div>
                     <div class="clients__picture--railgo">
-                        <img src="img/Railgo.png" alt="" class="clients__image">
+                        <img src="img/Railgo.png" alt="Railgo" class="clients__image">
                     </div>
                 </div>
             </div>
             <div class="clients__line">
-                <div class="content-row clients__element">
+                <div class="content-row clients__element clients__element--two">
                     <div class="clients__picture--mega">
-                        <img src="img/Mega.png" alt="" class="clients__image--mega">
+                        <img src="img/Mega.png" alt="Мега" class="clients__image--mega">
                     </div>
                     <div class="clients__picture--sbi">
-                        <img src="img/Sbi.png" alt="" class="clients__image">
+                        <img src="img/Sbi.png" alt="SBI bank" class="clients__image">
                     </div>
                     <div class="clients__picture--aeroflot">
-                        <img src="img/Aeroflot.png" alt="" class="clients__image--mega">
+                        <img src="img/Aeroflot.png" alt="Aeroflot" class="clients__image--mega">
                     </div>
                     <div class="clients__picture--otkritie">
-                        <img src="img/Otkritie.png" alt="" class="clients__image">
+                        <img src="img/Otkritie.png" alt="Открытие" class="clients__image">
                     </div>
                 </div>
             </div>
             <div class="clients__line">
-                <div class="content-row clients__element">
-                    <div class="clients__picture--sber">
-                        <img src="img/Project.png" alt="" class="clients__image--mega">
+                <div class="content-row clients__element clients__element--three clients__element--one">
+                    <div class="clients__picture--project">
+                        <img src="img/Project.png" alt="Национальные проекты" class="clients__image--mega">
                     </div>
-                    <div class="clients__picture--sibur">
-                        <img src="img/Servier.png" alt="" class="clients__image">
+                    <div class="clients__picture--servier">
+                        <img src="img/Servier.png" alt="Servier" class="clients__image">
                     </div>
-                    <div class="clients__picture--railgo">
-                        <img src="img/AOP.png" alt="" class="clients__image">
+                    <div class="clients__picture--city">
+                        <img src="img/City.png" alt="Умный город" class="clients__image">
+                    </div>
+                    <div class="clients__picture--aop">
+                        <img src="img/AOP.png" alt="АОР Ассоциация онкологов Росии" class="clients__image">
                     </div>
                 </div>
             </div>
             <div class="clients__line clients__line--bottom">
-                <div class="content-row clients__element">
-                    <div class="clients__picture--sber">
-                        <img src="img/Rostelecom.png" alt="" class="clients__image">
+                <div class="content-row clients__element clients__element--one">
+                    <div class="clients__picture--rostelecom">
+                        <img src="img/Rostelecom.png" alt="Ростелеком" class="clients__image">
                     </div>
-                    <div class="clients__picture--sibur">
-                        <img src="img/Rusgydro.png" alt="" class="clients__image--mega">
+                    <div class="clients__picture--rusgydro">
+                        <img src="img/Rusgydro.png" alt="РусГидро" class="clients__image--mega">
                     </div>
-                    <div class="clients__picture--railgo">
-                        <img src="img/Departament.png" alt="" class="clients__image">
+                    <div class="clients__picture--departament">
+                        <img src="img/Departament.png" alt="Департамент города Москвы" class="clients__image">
+                    </div>
+                    <div class="clients__picture--biblio">
+                        <img src="img/Biblio.png" alt="Библионочь" class="clients__image">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="work__box contact__box">
             <p class="work__paragraph">
                 <span class="work__name">Контакты</span>
@@ -190,12 +206,21 @@
             <form class="contact__form">
                 <input type="text" placeholder="от кого" class="contact__input">
                 <div class="contact__input--buffer"></div>
-                <textarea></textarea>
-                <button type="submit">SEND</button>
+                <textarea class="contact__textarea"></textarea>
+                <button type="submit" class="contact__button">SEND</button>
             </form>
         </div>
     </section>
 </div>
+<footer class="footer">
+    <div class="content-container ">
+        <div class="content-row footer__content">
+            <a href="https://www.instagram.com/alex_wood_tms/?hl=ru" class="footer__link" target="_blank">instagram</a>
+            <a href="#header"><img src="img/logo-white.svg" alt="logo"></a>
+            <a href="https://telegram.im/@verss" target="_blank" class="footer__link">telegram</a>
+        </div>
+    </div>
+</footer>
 <script
         src="https://code.jquery.com/jquery-3.5.0.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
