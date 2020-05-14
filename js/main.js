@@ -17,3 +17,11 @@ document.body.appendChild(canvas);
     requestAnimationFrame(loop);
 
 })();
+
+var $input = $('.contact__input'),
+    $buffer = $('.contact__input--buffer');
+
+$input.on('input', function() {
+    $buffer.text($input.val());
+    $input.width($buffer.width());
+});

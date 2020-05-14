@@ -63,7 +63,7 @@ canvas{
   height: 100%;
   z-index: 9999;
   pointer-events: none;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 .block {
   height: 100%;
@@ -422,6 +422,17 @@ canvas{
       height: 1px;
       width: 98.3%;
     }
+    &--bottom{
+      &:after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 5.4%;
+        border-bottom: 1px solid #000000;
+        height: 1px;
+        width: 98.3%;
+      }
+    }
 
 
   }
@@ -489,7 +500,6 @@ canvas{
     border: 1px solid #201D1E;
     box-sizing: border-box;
     margin-bottom: 18px;
-    width: max-content;
     font-family: "Circe Extra Light";
     font-style: normal;
     font-weight: normal;
@@ -497,6 +507,15 @@ canvas{
     line-height: 40px;
     padding: 10px 20px;
     background: transparent;
+    width: 223px;
+    min-width: 223px;
+    &--buffer{
+      position: absolute;
+      top: -1000px;
+      left: -1000px;
+      visibility: hidden;
+      white-space: nowrap;
+    }
   }
 }
 .contact__input::placeholder{
