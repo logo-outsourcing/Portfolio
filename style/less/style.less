@@ -55,7 +55,16 @@
   display: flex;
   flex-direction: row;
 }
-
+canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.1;
+}
 .block {
   height: 100%;
   position: absolute;
@@ -111,7 +120,7 @@
       top: calc(100vh - 29px);
     }
     &--work{
-      top: 265vh;
+      top: 167vh;
     }
   }
 }
@@ -133,6 +142,7 @@
     top: 21%;
     right: 22%;
     clip: rect(auto, auto, auto, 70px);
+    z-index: -1;
   }
   &__heading {
     margin-bottom: 196px;
@@ -240,6 +250,7 @@
     line-height: 10px;
     color: #EB5938;
     transform: rotate(-90deg);
+    text-decoration: none;
   }
 }
 
@@ -329,6 +340,7 @@
 
 .work {
   position: relative;
+  margin-bottom: 243px;
   &:before {
     content: "";
     background: url("../../img/Polygon.svg") no-repeat;
@@ -385,8 +397,136 @@
       color: #201D1E;
     }
   }
+  &__link{
+    color: #727272;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 20px;
+  }
 }
 
+.clients{
+  margin-bottom: 253px;
+  &__box{
+    margin-bottom: 120px;
+  }
+  &__line{
+    position: relative;
+    padding: 40px 0;
+    &:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 5.4%;
+      border-top: 1px solid #000000;
+      height: 1px;
+      width: 98.3%;
+    }
+
+
+  }
+  &__element{
+    justify-content: space-around;
+    align-items: center;
+    width: 88%;
+    margin: 0 auto;
+    padding-left: 8%;
+    box-sizing: border-box;
+  }
+  &__picture{
+    &--sber{
+      width: 32%;
+    }
+    &--sibur{
+      width: 23%;
+    }
+    &--railgo{
+      width: 22%;
+    }
+    &--mega{
+      width: 15%;
+    }
+    &--sbi{
+      width: 13%;
+    }
+    &--aeroflot{
+      width: 20%;
+    }
+    &--otkritie{
+      width: 31%;
+    }
+  }
+  &__image{
+    filter: brightness(0.1);
+    max-width: 100%;
+    display: block;
+    margin: 0;
+    &:hover{
+      filter: brightness(1);
+    }
+    &--mega{
+      max-width: 100%;
+      display: block;
+      margin: 0;
+      filter: grayscale(1);
+      &:hover{
+        filter: grayscale(0);
+      }
+    }
+  }
+}
+.contact{
+  position: relative;
+  &__box{
+    margin-bottom: 120px;
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10.3%;
+  }
+  &__input{
+    border: 1px solid #201D1E;
+    box-sizing: border-box;
+    margin-bottom: 18px;
+    width: max-content;
+    font-family: "Circe Extra Light";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    padding: 10px 20px;
+    background: transparent;
+  }
+}
+.contact__input::placeholder{
+  font-family: "Zamenhof Outline";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  color: #727272;
+}
+.contact__input::-webkit-input-placeholder { /* Edge */
+  font-family: "Zamenhof Outline";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  color: #727272;
+}
+
+.contact__input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-family: "Zamenhof Outline";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  color: #727272;
+}
 @media screen and(max-width: 1440px) {
   .header:after {
     top: 21%;
