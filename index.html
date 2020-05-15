@@ -9,7 +9,9 @@
     <link rel="icon" href="img/logo.svg">
 </head>
 <body>
-<div class="content-wrapper">
+<div class="content-wrapper" id="scroll-container">
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
     <div class=" block">
         <div class="block__col">
             <a href="#" class="header__logo"><img src="img/logo.svg" alt="logo"></a>
@@ -21,19 +23,19 @@
             <span class="block__line"></span>
             <a href="#about" class="block__link block__link--about">
                 <span class="block__link--square"></span>
-                <span>Обо мне</span></a>
+                <span class="block__link--text">Обо мне</span></a>
             <a href="#work" class="block__link block__link--work">
                 <span class="block__link--square"></span>
-                <span>Мои работы</span></a>
+                <span class="block__link--text">Мои работы</span></a>
             <a href="#clients" class="block__link block__link--clients">
                 <span class="block__link--square"></span>
-                <span>Мои клиенты</span></a>
+                <span class="block__link--text">Мои клиенты</span></a>
             <a href="#contact" class="block__link block__link--contact">
                 <span class="block__link--square"></span>
-                <span>Мои контакты</span></a>
+                <span class="block__link--text">Мои контакты</span></a>
             <a href="#header" class="block__link block__link--top">
                 <span class="block__link--inner"></span>
-                <span>На верх</span></a>
+                <span class="block__link--text">На верх</span></a>
         </div>
     </div>
     <header class="header" id="header">
@@ -225,6 +227,7 @@
         src="https://code.jquery.com/jquery-3.5.0.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
         crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
