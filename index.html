@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="style/css/style.css">
     <link rel="icon" href="img/logo.svg">
 </head>
-<body>
-<div class="content-wrapper">
+<body data-scroll-container>
+<div class="content-wrapper"  >
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
-    <div class=" block">
+    <div class=" block" data-scroll-section>
         <div class="block__col">
             <a href="#" class="header__logo"><img src="img/logo.svg" alt="logo"></a>
             <span class="block__line "></span>
@@ -38,7 +38,7 @@
                 <span class="block__link--text">На верх</span></a>
         </div>
     </div>
-    <header class="header" id="header">
+    <header class="header" id="header" data-scroll-section>
         <div class="content-container">
             <div class="content-row header__heading">
 
@@ -56,33 +56,26 @@
             </div>
             <div class="header__content">
                 <h1 class="header__title ">
-                    <span class="header__title--element parallax" data-paroller-factor="0.05"
-                          data-paroller-type="foreground">ВОЗЧИКОВ</span><span
-                        class="header__title--element parallax header__title--name" data-paroller-factor="0.1"
-                        data-paroller-type="foreground">CЕРГЕЙ</span><span
-                        class="header__title--element header__title--inner parallax" data-paroller-factor="0.15"
-                        data-paroller-type="foreground">ПОРТФОЛИО</span><span
-                        class="header__title--element header__title--data parallax" data-paroller-factor="0.2"
-                        data-paroller-type="foreground">2019-2020</span></h1>
+                    <span class="header__title--element  " data-scroll data-scroll-speed="1" data-scroll-position="top" data-scroll-delay="0.05">ВОЗЧИКОВ</span><span
+                        class="header__title--element  header__title--name" data-scroll data-scroll-speed="2" data-scroll-position="top" data-scroll-delay="0.05">CЕРГЕЙ</span><span
+                        class="header__title--element header__title--inner " data-scroll data-scroll-speed="3" data-scroll-position="top" data-scroll-delay="0.05">ПОРТФОЛИО</span><span
+                        class="header__title--element header__title--data " data-scroll data-scroll-speed="4" data-scroll-position="top" data-scroll-delay="0.05">2019-2020</span></h1>
                 <a href="https://www.instagram.com/alex_wood_tms/?hl=ru" target="_blank" class="header__text">
                     @alex_wood_tms </a>
             </div>
         </div>
     </header>
-    <section class="about" id="about">
+    <section class="about" id="about" data-scroll-section>
         <div class="content-container">
             <div class="about__content">
-                <p class="about__text parallax" data-paroller-factor="0.01"
-                   data-paroller-type="foreground">
+                <p class="about__text " data-scroll data-scroll-speed="1" data-scroll-position="top" >
                     Привет! Я являюсь старшим дизайнером в комуникационном агенстве <a href="#" class="about__link">
                     MARKET GROUP</a>. Я работаю над всеми видами визуальной коммуникации включая UI/UX .
                 </p>
                 <div class="content-row about__box ">
-                    <h3 class="about__name parallax" data-paroller-factor="0.01"
-                        data-paroller-type="foreground">Основные рабочие
+                    <h3 class="about__name " data-scroll data-scroll-speed="1" data-scroll-position="top" >Основные рабочие
                         инструменты:</h3>
-                    <ul class="about__list parallax" data-paroller-factor="0.1"
-                        data-paroller-type="foreground">
+                    <ul class="about__list " data-scroll data-scroll-speed="2" data-scroll-position="top" >
                         <li class="about__tools">Photoshop/illustrator/</li>
                         <li class="about__tools"> lightroom/Premier pro/</li>
                         <li class="about__tools"> After effects /XD/Figma/</li>
@@ -93,10 +86,9 @@
             </div>
         </div>
     </section>
-    <section class="work" id="work">
+    <section class="work" id="work" data-scroll-section>
         <div class="work__box">
-            <p class="work__paragraph work__paragraph--left parallax" data-paroller-factor="0.1"
-               data-paroller-type="foreground" data-paroller-direction="horizontal">
+            <p class="work__paragraph work__paragraph--left " data-scroll data-scroll-direction="horizontal" data-scroll-speed="-8">
                 <span class="work__name">МОИ РАБОТЫ</span>
                 <span class="work__name work__name--font">МОИ РАБОТЫ</span>
                 <span class="work__name">МОИ РАБОТЫ</span>
@@ -104,8 +96,7 @@
                 <span class="work__name work__name--font">МОИ РАБОТЫ</span>
                 <span class="work__name">МОИ РАБОТЫ</span>
             </p>
-            <p class="work__paragraph work__paragraph--right parallax" data-paroller-factor="-0.1"
-               data-paroller-type="foreground" data-paroller-direction="horizontal">
+            <p class="work__paragraph work__paragraph--right " data-scroll data-scroll-direction="horizontal" data-scroll-speed="8">
                 <span class="work__name work__name--font">MY WORKS</span>
                 <span class="work__name work__name--font work__name--color">MY WORKS</span>
                 <span class="work__name ">MY WORKS</span>
@@ -125,10 +116,9 @@
             </ul>
         </div>
     </section>
-    <section class="clients" id="clients">
+    <section class="clients" id="clients" data-scroll-section>
         <div class="work__box clients__box">
-            <p class="work__paragraph parallax" data-paroller-factor="0.1" data-paroller-type="foreground"
-               data-paroller-direction="horizontal">
+            <p class="work__paragraph " data-scroll data-scroll-direction="horizontal" data-scroll-speed="-8">
                 <span class="work__name">КЛИЕНТЫ</span>
                 <span class="work__name work__name--font">КЛИЕНТЫ</span>
                 <span class="work__name work__name--font work__name--color">КЛИЕНТЫ</span>
@@ -138,8 +128,7 @@
                 <span class="work__name work__name--font work__name--color">КЛИЕНТЫ</span>
                 <span class="work__name">КЛИЕНТЫ</span>
             </p>
-            <p class="work__paragraph parallax work__paragraph--right" data-paroller-factor="-0.1"
-               data-paroller-type="foreground" data-paroller-direction="horizontal">
+            <p class="work__paragraph  work__paragraph--right" data-scroll data-scroll-direction="horizontal" data-scroll-speed="8">
                 <span class="work__name work__name--font">Clients</span>
                 <span class="work__name work__name--font work__name--color">Clients</span>
                 <span class="work__name ">Clients</span>
@@ -150,7 +139,7 @@
                 <span class="work__name work__name--font">Clients</span>
             </p>
         </div>
-        <div class="content-container">
+        <div class="content-container" >
             <div class="clients__line">
                 <div class="content-row clients__element clients__element--one">
                     <div class="clients__picture--sber">
@@ -214,10 +203,9 @@
             </div>
         </div>
     </section>
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" data-scroll-section>
         <div class="work__box contact__box">
-            <p class="work__paragraph parallax" data-paroller-factor="0.1" data-paroller-type="foreground"
-               data-paroller-direction="horizontal">
+            <p class="work__paragraph " data-scroll data-scroll-direction="horizontal" data-scroll-speed="-8">
                 <span class="work__name">Контакты</span>
                 <span class="work__name work__name--font">Контакты</span>
                 <span class="work__name work__name--font work__name--color">Контакты</span>
@@ -227,8 +215,7 @@
                 <span class="work__name work__name--font work__name--color">Контакты</span>
                 <span class="work__name">Контакты</span>
             </p>
-            <p class="work__paragraph parallax work__paragraph--right" data-paroller-factor="-0.1"
-               data-paroller-type="foreground" data-paroller-direction="horizontal">
+            <p class="work__paragraph  work__paragraph--right" data-scroll data-scroll-direction="horizontal" data-scroll-speed="8">
                 <span class="work__name work__name--font">Contacts</span>
                 <span class="work__name work__name--font work__name--color">Contacts</span>
                 <span class="work__name ">Contacts</span>
@@ -249,7 +236,7 @@
         </div>
     </section>
 </div>
-<footer class="footer">
+<footer class="footer" data-scroll-section>
     <div class="content-container ">
         <div class="content-row footer__content">
             <a href="https://www.instagram.com/alex_wood_tms/?hl=ru" class="footer__link" target="_blank">instagram</a>
@@ -259,11 +246,23 @@
     </div>
 </footer>
 <script
-        src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-<script src="js/jquery.paroller.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+<script src="js/locomotive-scroll.min.js"></script>
+<script>
+    (function () {
+        var scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true
+        });
+
+    })();
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>

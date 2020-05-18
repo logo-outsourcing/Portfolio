@@ -7,13 +7,13 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Circe Bold';
   src: url('../../fonts/circe-bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-
 
 @font-face {
   font-family: 'Fagot Cond Outline C';
@@ -35,10 +35,68 @@
   font-weight: normal;
   font-style: normal;
 }
-html, body{
+
+html, body {
   cursor: none;
   overflow-x: hidden;
 }
+
+html.has-scroll-smooth {
+   overflow: hidden;
+ }
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100vh;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
 .cursor {
   position: absolute;
   background-color: #fff;
@@ -51,35 +109,41 @@ html, body{
   pointer-events: none;
   transform: scale(1);
 }
+
 .cursor::before {
-  content:'';
-  width:100%;
-  height:100%;
-  position:absolute;
-  top:0;
-  left:0;
-  display:block;
-  background-image:url(http://mirkozeppieri.emanuelepapale.com/wp-content/uploads/2018/07/project-hover-cursor.jpg);
-  background-position:center;
-  background-repeat:no-repeat;
-  background-size:cover;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-image: url(http://mirkozeppieri.emanuelepapale.com/wp-content/uploads/2018/07/project-hover-cursor.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 100%;
-  opacity:0;
+  opacity: 0;
 }
+
 .cursor.active {
   opacity: 0.5;
   transform: scale(0);
 }
+
 .cursor.active2 {
   opacity: 1;
   transform: scale(12);
 }
+
 .cursor.active2::before {
   opacity: 1;
 }
+
 .cursor.hovered {
   opacity: 0.08;
 }
+
 .cursor-follower {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.3);
@@ -92,17 +156,21 @@ html, body{
   pointer-events: none;
   transform: translate(5px, 5px);
 }
+
 .cursor-follower.active {
   opacity: 0.7;
   transform: scale(3);
 }
+
 .cursor-follower.active2 {
   opacity: 0.3;
   transform: scale(0);
 }
+
 .cursor-follower.hovered {
   opacity: 0.08;
 }
+
 .content-wrapper {
   position: relative;
   margin: 0 auto;
@@ -183,9 +251,9 @@ canvas {
     pointer-events: visible;
     z-index: 4;
     text-decoration: none;
-    &--text{
+    &--text {
       display: block;
-      transition: all .3s cubic-bezier(.215,.61,.355,1);
+      transition: all .3s cubic-bezier(.215, .61, .355, 1);
     }
     &--square {
       background: #EB5938;
@@ -314,7 +382,7 @@ canvas {
       padding-top: 100px;
       position: relative;
       background: #C7C0B8;
-      transition: padding-top .8s cubic-bezier(.215,.61,.355,1);
+      transition: padding-top .8s cubic-bezier(.215, .61, .355, 1);
       &:first-letter {
         margin-left: -15px;
       }
@@ -332,15 +400,15 @@ canvas {
         transition: top 1s cubic-bezier(.215, .61, .355, 1), opacity 0s ease 1s, visibility 0s ease 1s;
       }
     }
-    &--active{
+    &--active {
       padding: 0;
-      &:before{
+      &:before {
         top: 100%;
       }
     }
-    &--inner{
+    &--inner {
       transition-delay: 1.2s;
-      &:before{
+      &:before {
         transition-delay: 1.2s;
 
       }
@@ -349,14 +417,14 @@ canvas {
       margin-left: 8%;
       color: #201D1E;
       transition-delay: 1s;
-      &:before{
+      &:before {
         transition-delay: 1s;
       }
     }
     &--data {
       margin-left: 8%;
       transition-delay: 1.4s;
-      &:before{
+      &:before {
         transition-delay: 1.4s;
       }
     }
@@ -502,7 +570,8 @@ canvas {
   }
   &__paragraph {
     width: max-content;
-    &--right{
+
+    &--right {
       margin-left: -136%;
     }
   }
@@ -516,6 +585,8 @@ canvas {
     color: #4F4F4F;
     display: inline-block;
     margin-right: 43px;
+    position: relative;
+
     &--font {
       font-family: "Zamenhof Outline";
     }
@@ -863,15 +934,18 @@ canvas {
   .block__line {
     display: none;
   }
+
   .clients__line:before,
-  .clients__line--bottom:after{
+  .clients__line--bottom:after {
     left: 0;
     width: 100%;
   }
+
   .clients__element {
     width: 100%;
     padding: 0;
   }
+
   .header:after {
     right: 0;
     clip: auto;
@@ -1016,35 +1090,44 @@ canvas {
   .footer__content {
     flex-direction: column;
   }
+
   .work__name {
     font-size: 30px;
     line-height: 48px;
     margin-right: 15px;
   }
+
   .about {
     margin-bottom: 0;
   }
+
   .work {
     margin-bottom: 60px;
   }
+
   .work__box {
 
     margin-bottom: 60px;
   }
+
   .work__list {
     font-size: 34px;
     line-height: 45px;
     text-align: left;
   }
+
   .work__link {
     margin-bottom: 10px;
   }
+
   .contact__textarea {
     min-height: 300px;
   }
+
   .contact {
     padding-bottom: 100px;
   }
+
   .clients {
     margin-bottom: 60px;
   }
