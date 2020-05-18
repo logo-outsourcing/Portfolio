@@ -1,16 +1,4 @@
 $(document).ready(function () {
-    // var controller = new ScrollMagic.Controller();
-    // var scale_tween = TweenMax.to('.work__paragraph--left', 1, {
-    //     transform: 'translate(-77px,0)',
-    //     ease: Linear.easeNone
-    // });
-    // var scale_scene = new ScrollMagic.Scene({
-    //     triggerElement: '.work__box'
-    // })
-    //     .setTween(scale_tween);
-    // controller.addScene([
-    //     scale_scene,
-    // ]);
 
     $('.header__title--element').addClass('header__title--active');
     var cursor = $(".cursor"),
