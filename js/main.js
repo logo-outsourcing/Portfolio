@@ -1,7 +1,9 @@
 $(document).ready(function () {
     $(function () {
 
-     $('.parallax').paroller();
+     $('.parallax').paroller({
+         transition: 'translate 0.1s linear'
+     });
     });
 
     $('.header__title--element').addClass('header__title--active')
