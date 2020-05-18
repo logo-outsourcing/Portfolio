@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
     $('.header__title--element').addClass('header__title--active');
     var cursor = $(".cursor"),
         follower = $(".cursor-follower");
