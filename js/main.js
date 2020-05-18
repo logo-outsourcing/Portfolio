@@ -1,18 +1,7 @@
 $(document).ready(function () {
     $(function () {
         $('.parallax').paroller();
-
     });
-    // $(document).on( 'scroll', function(){
-    //     var scrollHeight = Math.max(
-    //         document.body.scrollHeight, document.documentElement.scrollHeight,
-    //         document.body.offsetHeight, document.documentElement.offsetHeight,
-    //         document.body.clientHeight, document.documentElement.clientHeight
-    //     );
-    //
-    //    console.log( 'Высота с учётом прокрутки: ' + window.pageYOffset  );
-    // });
-
 
     $('.header__title--element').addClass('header__title--active')
     var cursor = $(".cursor"),
