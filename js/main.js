@@ -2,7 +2,7 @@ $(document).ready(function () {
     $(function () {
 
      $('.parallax').paroller({
-         transition: 'translate 0.1s linear'
+         transition: 'translate 0.001s linear'
      });
     });
 
