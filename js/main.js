@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $(function () {
-        $('.parallax').paroller();
+
+     $('.parallax').paroller();
     });
 
     $('.header__title--element').addClass('header__title--active')
@@ -39,15 +40,6 @@ $(document).ready(function () {
         mouseX = e.pageX;
         mouseY = e.pageY;
     });
-
-// $(".link").on("mouseenter", function() {
-//     cursor.addClass("active");
-//     follower.addClass("active");
-// });
-// $(".link").on("mouseleave", function() {
-//     cursor.removeClass("active");
-//     follower.removeClass("active");
-// });
 
 
     $(".work__link").on("mouseenter", function () {
