@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>Возчиков Сергей – UX/UI Designer</title>
     <link rel="stylesheet" href="style/css/reset.css">
-    <link rel="stylesheet" href="style/css/style.css?ver=8">
+    <link rel="stylesheet" href="style/css/style.css?ver=9">
     <link rel="icon" href="img/logo.svg">
 </head>
 <body>
@@ -32,13 +32,13 @@
                         <a href="#" class="header__logo"><img src="img/logo.svg" alt="logo"></a>
                         <ul class="content-row header__menu">
                             <li class="header__item">
-                                <a class="header__link" href="#about">обо мне</a>
+                                <a class="header__link" data-scroll-to href="#about">обо мне</a>
                             </li>
                             <li class="header__item">
-                                <a class="header__link" href="#work">работы</a>
+                                <a class="header__link" data-scroll-to href="#work">работы</a>
                             </li>
                             <li class="header__item">
-                                <a class="header__link" href="#contact">контакты</a>
+                                <a class="header__link" data-scroll-to href="#contact">контакты</a>
                             </li>
                         </ul>
                     </div>
@@ -318,8 +318,8 @@
             </section>
 
             <footer class="footer" data-scroll  data-scroll-section >
-                <div class="content-container " data-scroll data-scroll-speed="2" data-scroll-position="bottom">
-                    <div class="content-row footer__content">
+                <div class="content-container ">
+                    <div class="content-row footer__content"  data-scroll data-scroll-speed="2" data-scroll-position="bottom">
                         <a href="https://www.instagram.com/alex_wood_tms/?hl=ru" class="footer__link"
                            target="_blank">instagram</a>
                         <a href="#header"><img src="img/logo-white.svg" alt="logo"></a>
@@ -338,6 +338,6 @@
 <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.4.4/dist/locomotive-scroll.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.1-rc2/lazysizes.min.js" async=""></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-<script src="js/main.js?ver=8"></script>
+<script src="js/main.js?ver=9"></script>
 </body>
 </html>

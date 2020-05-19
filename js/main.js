@@ -71,16 +71,7 @@ $(document).ready(function () {
         cursor.removeClass("active2");
         follower.removeClass("active2");
     });
-    $('.block__link').click(function () {
-        var target = $(this).attr('href');
-        $('html, body').animate({scrollTop: $(target).offset().top}, 1000);
-        return false;
-    });
-    $('.header__link').click(function () {
-        var target = $(this).attr('href');
-        $('html, body').animate({scrollTop: $(target).offset().top}, 1000);
-        return false;
-    });
+
 
     var $input = $('.contact__input'),
         $buffer = $('.contact__input--buffer');
