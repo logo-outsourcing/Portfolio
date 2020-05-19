@@ -63,6 +63,14 @@ $(document).ready(function () {
         mouseX = e.pageX;
         mouseY = e.pageY;
     });
+    $(".work__link").on("mouseenter", function() {
+        cursor.addClass("active2");
+        follower.addClass("active2");
+    });
+    $(".work__link").on("mouseleave", function() {
+        cursor.removeClass("active2");
+        follower.removeClass("active2");
+    });
     $('.block__link').click(function () {
         var target = $(this).attr('href');
         $('html, body').animate({scrollTop: $(target).offset().top}, 1000);
