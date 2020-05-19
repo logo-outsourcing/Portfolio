@@ -1,28 +1,10 @@
 $(document).ready(function () {
 
-$('.content-site').removeClass('hidden');
-    (function () {
-        var scroll = new LocomotiveScroll({
-            el: document.querySelector('#js-scroll'),
-            smooth: true,
-            smoothMobile: true,
-            touchMultiplier: 2,
-            getSpeed: true,
-            getDirection: true,
-            inertia: 1,
-            firefoxMultiplier: 50,
-            useKeyboard: true,
-            offset: [0, 0],
-            repeat: true,
-            class: "is-inview",
-            scrollbarClass: "c-scrollbar",
-            scrollingClass: "has-scroll-scrolling",
-            draggingClass: "has-scroll-dragging",
-            smoothClass: "has-scroll-smooth",
-            initClass: "has-scroll-init",
-        });
 
-    })();
+    $('.content-site').removeClass('hidden');
+    setTimeout(function () {
+        $('.header__title--element').addClass('header__title--active');
+    }, 500);
 
     $('.block__link').click(function () {
         var target = $(this).attr('href');
@@ -65,5 +47,3 @@ $('.content-site').removeClass('hidden');
 
 
 });
-
-$('.header__title--element').addClass('header__title--active');
