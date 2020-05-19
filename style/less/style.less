@@ -93,16 +93,18 @@ html.has-scroll-dragging {
   cursor: grabbing;
 }
 
-.content-site{
+.content-site {
   opacity: 1;
   visibility: visible;
-  transition: opacity .5s cubic-bezier(.215,.61,.355,1),visibility .5s cubic-bezier(.215,.61,.355,1);
+  transition: opacity .5s cubic-bezier(.215, .61, .355, 1), visibility .5s cubic-bezier(.215, .61, .355, 1);
 
 }
-.hidden{
+
+.hidden {
   opacity: 0;
   visibility: hidden;
 }
+
 .content-wrapper {
   position: relative;
   margin: 0 auto;
@@ -118,11 +120,10 @@ html.has-scroll-dragging {
     z-index: -2;
   }
 
-
 }
 
 .content-container {
-  width: 90%;
+  width: 93.4%;
   max-width: 1220px;
   margin: 0 auto;
 }
@@ -142,6 +143,21 @@ canvas {
   opacity: 0.1;
 }
 
+.wrapper {
+  position: relative;
+  &:before {
+    content: "";
+    background: url("../../img/Polygon.svg") no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 19%;
+    left: 0;
+    width: 100%;
+    height: 1112px;
+    z-index: -1;
+  }
+}
+
 .block {
   height: 100%;
   position: absolute;
@@ -151,6 +167,7 @@ canvas {
   right: 0;
   margin: 0 auto;
   padding-left: 65px;
+  z-index: 0;
   box-sizing: border-box;
 
   &__col {
@@ -183,7 +200,7 @@ canvas {
     transform-origin: top left;
     transform: rotate(-90deg);
     opacity: 1;
-    left: 65px;
+    left: 25px;
     visibility: visible;
     pointer-events: visible;
     z-index: 4;
@@ -207,19 +224,19 @@ canvas {
       transition: all .3s cubic-bezier(.215, .61, .355, 1);
     }
     &--about {
-      top: calc(100vh - 105px);
+      bottom: -17%;
     }
     &--work {
-      top: calc(200vh - 20rem);
+      bottom: -17%;
     }
     &--clients {
-      top: calc(300vh - 5rem);
+      bottom: -17%;
     }
     &--contact {
-      top: calc(450vh - 10rem);
+      bottom: -17%;
     }
     &--top {
-      top: calc(600vh - 20rem);
+      bottom: -17%;
     }
 
   }
@@ -233,10 +250,15 @@ canvas {
   width: 40px;
 }
 
+.position {
+  position: relative;
+}
+
 .header {
   padding: 42px 0;
   margin-bottom: 175px;
   position: relative;
+
   &:after {
     content: "";
     position: absolute;
@@ -253,12 +275,13 @@ canvas {
   &__heading {
     margin-bottom: 196px;
     padding: 40px 0;
+    position: relative;
   }
   &__logo {
     display: block;
     position: absolute;
-    top: 41px;
-    left: 105px;
+    top: 0;
+    left: 65px;
   }
   &__item {
     margin-right: 40px;
@@ -389,7 +412,7 @@ canvas {
   }
   &__text {
     position: absolute;
-    left: 46%;
+    left: 43%;
     top: 145px;
     font-family: "Zamenhof Plain";
     font-style: normal;
@@ -486,29 +509,15 @@ canvas {
 }
 
 .work {
-  position: relative;
   margin-bottom: 243px;
-  &:before {
-    content: "";
-    background: url("../../img/Polygon.svg") no-repeat;
-    background-position: center;
-    position: absolute;
-    top: -483px;
-    left: -4%;
-    width: 97%;
-    height: 1112px;
-    z-index: -1;
-  }
+
   &__box {
     overflow: hidden;
     margin-bottom: 252px;
   }
   &__paragraph {
     width: max-content;
-
-    &--right {
-      margin-left: -136%;
-    }
+    margin-left: -136%;
   }
   &__name {
     font-family: "Zamenhof Plain";
@@ -723,6 +732,7 @@ canvas {
     line-height: 40px;
     background: transparent;
     min-height: 505px;
+    padding: 15px;
   }
   &__button {
     margin-left: auto;
@@ -815,11 +825,25 @@ canvas {
   .work__list {
     width: 95%;
   }
+
+  //.header__logo {
+  //  left: 5.7%;
+  //}
+  //.block__link {
+  //  left: 1.5%;
+  //}
+  .header__text {
+    left: 47%;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   .block__col {
     grid-template-columns: 40px 60px 250px 250px 250px 10px;
+  }
+
+  .content-container {
+    width: 92%;
   }
 
   .header__text {
