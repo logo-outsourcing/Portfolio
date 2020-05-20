@@ -28,6 +28,29 @@ $(document).ready(function () {
         })();
     }, 500);
 
+
+    var canvas = document.createElement("canvas");
+    c = canvas.getContext('2d');
+
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+
+    var imageData = c.createImageData(canvas.width, canvas.height);
+    document.body.appendChild(canvas);
+
+    (function loop() {
+
+        for (var i = 0, a = imageData.data.length; i < a; i++) {
+            imageData.data[i] = (Math.random() * 20)|0;
+        }
+
+        c.putImageData(imageData, 0, 0);
+        requestAnimationFrame(loop);
+
+    })();
+
+
+
     var cursor = $(".cursor"),
         follower = $(".cursor-follower");
 
@@ -39,7 +62,7 @@ $(document).ready(function () {
 
     TweenMax.to({}, 0.016, {
         repeat: -1,
-        onRepeat: function() {
+        onRepeat: function () {
             posX += (mouseX - posX) / 9;
             posY += (mouseY - posY) / 9;
 
@@ -59,15 +82,15 @@ $(document).ready(function () {
         }
     });
 
-    $(document).on("mousemove", function(e) {
+    $(document).on("mousemove", function (e) {
         mouseX = e.pageX;
         mouseY = e.pageY;
     });
-    $(".work__link").on("mouseenter", function() {
+    $(".work__link").on("mouseenter", function () {
         cursor.addClass("active2");
         follower.addClass("active2");
     });
-    $(".work__link").on("mouseleave", function() {
+    $(".work__link").on("mouseleave", function () {
         cursor.removeClass("active2");
         follower.removeClass("active2");
     });

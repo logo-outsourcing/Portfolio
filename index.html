@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>Возчиков Сергей – UX/UI Designer</title>
     <link rel="stylesheet" href="style/css/reset.css">
-    <link rel="stylesheet" href="style/css/style.css?ver=9">
+    <link rel="stylesheet" href="style/css/style.css?ver=10">
     <link rel="icon" href="img/logo.svg">
 </head>
 <body>
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
 <div id="js-scroll" data-scroll-container>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+
     <div class="content-wrapper ">
         <div class="content-site hidden">
             <div class=" block" data-scroll data-scroll-section>
@@ -316,19 +317,20 @@
                               data-scroll-direction="horizontal">На верх</span></a>
                 </div>
             </section>
-
-            <footer class="footer" data-scroll  data-scroll-section >
-                <div class="content-container ">
-                    <div class="content-row footer__content"  data-scroll data-scroll-speed="2" data-scroll-position="bottom">
-                        <a href="https://www.instagram.com/alex_wood_tms/?hl=ru" class="footer__link"
-                           target="_blank">instagram</a>
-                        <a href="#header"><img src="img/logo-white.svg" alt="logo"></a>
-                        <a href="https://telegram.im/@verss" target="_blank" class="footer__link">telegram</a>
-                    </div>
-                </div>
-            </footer>
         </div>
     </div>
+    <footer class="footer"  data-scroll-section>
+        <div class="content-container " >
+            <div class="content-row footer__content">
+                <a href="https://www.instagram.com/alex_wood_tms/?hl=ru" class="footer__link"
+                   target="_blank"  >instagram</a>
+                <a href="#header"  ><img src="img/logo-white.svg" alt="logo"></a>
+                <a href="https://telegram.im/@verss" target="_blank" class="footer__link">telegram</a>
+            </div>
+
+        </div>
+    </footer>
+
 
 </div>
 <script
@@ -338,6 +340,6 @@
 <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.4.4/dist/locomotive-scroll.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.1-rc2/lazysizes.min.js" async=""></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-<script src="js/main.js?ver=9"></script>
+<script src="js/main.js?ver=10"></script>
 </body>
 </html>

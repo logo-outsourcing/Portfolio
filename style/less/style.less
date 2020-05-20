@@ -38,7 +38,7 @@
 
 html {
   overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
   cursor: none;
 }
@@ -57,7 +57,6 @@ html.has-scroll-dragging {
 
 .has-scroll-smooth [data-scroll-container] {
   min-height: 100vh;
-overflow: hidden;
 }
 
 .c-scrollbar {
@@ -89,7 +88,7 @@ overflow: hidden;
   border-radius: 10px;
   margin: 2px;
   //cursor: -webkit-grab;
- // cursor: grab;
+  // cursor: grab;
 }
 
 //.has-scroll-dragging .c-scrollbar_thumb {
@@ -108,35 +107,41 @@ overflow: hidden;
   pointer-events: none;
   transform: scale(1);
 }
+
 .cursor::before {
-  content:'';
-  width:100%;
-  height:100%;
-  position:absolute;
-  top:0;
-  left:0;
-  display:block;
-  background-image:url(http://mirkozeppieri.emanuelepapale.com/wp-content/uploads/2018/07/project-hover-cursor.jpg);
-  background-position:center;
-  background-repeat:no-repeat;
-  background-size:cover;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-image: url(http://mirkozeppieri.emanuelepapale.com/wp-content/uploads/2018/07/project-hover-cursor.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 100%;
-  opacity:0;
+  opacity: 0;
 }
+
 .cursor.active {
   opacity: 0.5;
   transform: scale(0);
 }
+
 .cursor.active2 {
   opacity: 1;
   transform: scale(12);
 }
+
 .cursor.active2::before {
   opacity: 1;
 }
+
 .cursor.hovered {
   opacity: 0.08;
 }
+
 .cursor-follower {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.3);
@@ -149,17 +154,21 @@ overflow: hidden;
   pointer-events: none;
   transform: translate(5px, 5px);
 }
+
 .cursor-follower.active {
   opacity: 0.7;
   transform: scale(3);
 }
+
 .cursor-follower.active2 {
   opacity: 0.3;
   transform: scale(0);
 }
+
 .cursor-follower.hovered {
   opacity: 0.08;
 }
+
 .content-site {
   opacity: 1;
   visibility: visible;
@@ -207,7 +216,6 @@ canvas {
   width: 100vw;
   height: 100%;
   pointer-events: none;
-  opacity: 0.1;
 }
 
 .wrapper {
@@ -751,7 +759,7 @@ canvas {
 }
 
 .contact {
-  margin-bottom: 297px;
+  padding-bottom: 297px;
   box-sizing: border-box;
   &__box {
     margin-bottom: 120px;
@@ -850,6 +858,7 @@ canvas {
 
 .footer {
   background: #201D1E;
+  min-height: 30vh;
   &__content {
     justify-content: space-around;
     width: 55%;
@@ -1052,6 +1061,10 @@ canvas {
 
   .footer__content {
     width: 100%;
+  }
+
+  .footer {
+    height: auto;
   }
 
   .work__list {
