@@ -28,27 +28,27 @@ $(document).ready(function () {
         })();
     }, 500);
 
+    setTimeout(function () {
+        var canvas = document.createElement("canvas");
+        c = canvas.getContext('2d');
 
-    var canvas = document.createElement("canvas");
-    c = canvas.getContext('2d');
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
 
-    canvas.width = innerWidth;
-    canvas.height = innerHeight;
+        var imageData = c.createImageData(canvas.width, canvas.height);
+        document.body.appendChild(canvas);
 
-    var imageData = c.createImageData(canvas.width, canvas.height);
-    document.body.appendChild(canvas);
+        (function loop() {
 
-    (function loop() {
+            for (var i = 0, a = imageData.data.length; i < a; i++) {
+                imageData.data[i] = (Math.random() * 20) | 0;
+            }
 
-        for (var i = 0, a = imageData.data.length; i < a; i++) {
-            imageData.data[i] = (Math.random() * 20)|0;
-        }
+            c.putImageData(imageData, 0, 0);
+            requestAnimationFrame(loop);
 
-        c.putImageData(imageData, 0, 0);
-        requestAnimationFrame(loop);
-
-    })();
-
+        })();
+    }, 0);
 
 
     var cursor = $(".cursor"),
