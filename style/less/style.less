@@ -1,3 +1,5 @@
+@import "motion";
+
 @font-face {
   font-family: 'Circe Extra Light';
   src: url('../../fonts/Circe-ExtraLight.eot');
@@ -195,7 +197,9 @@ html.has-scroll-dragging {
     left: 0;
     z-index: -2;
   }
-
+  &--color:before {
+    background: #201D1E;
+  }
 }
 
 .content-container {
@@ -209,7 +213,19 @@ html.has-scroll-dragging {
   flex-direction: row;
 }
 
-canvas {
+.content-color {
+  &--white {
+    color: #ECE9E9;
+  }
+  &--gray {
+    color: #E5E5E5;
+  }
+  &--black {
+    color: #201D1E;
+  }
+}
+
+.grain {
   position: fixed;
   top: 0;
   left: 0;
@@ -228,7 +244,7 @@ canvas {
     left: 0;
     right: 0;
     width: 100%;
-    max-width:  1037px;
+    max-width: 1037px;
     height: auto;
     z-index: -1;
     margin: 0 auto;
@@ -359,6 +375,12 @@ canvas {
     position: absolute;
     top: 0;
     left: 65px;
+    &--color {
+      & img {
+        filter: invert(1);
+      }
+
+    }
   }
   &__item {
     margin-right: 40px;
@@ -392,6 +414,9 @@ canvas {
       width: 0;
       background: #EB5938;
       transition: all .5s cubic-bezier(.215, .61, .355, 1);
+    }
+    &--color {
+      color: #E5E5E5;
     }
   }
   &__menu {
@@ -461,6 +486,13 @@ canvas {
       transition-delay: 1.4s;
       &:before {
         transition-delay: 1.4s;
+      }
+    }
+    &--color {
+      color: #E5E5E5;
+      background: #201D1E;
+      &:before {
+        background: #201D1E;
       }
     }
   }
@@ -641,6 +673,22 @@ canvas {
     display: inline-block;
     margin-bottom: 20px;
   }
+  &__button {
+    display: block;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+    width: 0;
+    z-index: 99;
+    top: 330px;
+    cursor: pointer;
+    transition: all 0s, width .5s cubic-bezier(.215, .61, .355, 1), left .5s cubic-bezier(.215, .61, .355, 1);
+  }
+}
+
+.is-inview.work__button {
+  width: 50px;
+  left: -25px;
 }
 
 .clients {
@@ -756,6 +804,9 @@ canvas {
         filter: grayscale(0);
       }
     }
+    &--color{
+      filter: none;
+    }
   }
 }
 
@@ -825,6 +876,12 @@ canvas {
     width: 175px;
     padding: 8px;
   }
+  &__inner {
+    &--color {
+      color: #ECE9E9;
+      border-color: #ECE9E9;
+    }
+  }
 }
 
 .contact__input::placeholder {
@@ -857,9 +914,18 @@ canvas {
   color: #727272;
 }
 
+.contact__inner--color::placeholder,
+.contact__inner--color::-webkit-input-placeholder,
+.contact__inner--color:-ms-input-placeholder {
+  color: #ECE9E9;
+}
+
 .footer {
   background: #201D1E;
   min-height: 30vh;
+  &__color{
+    background: #EB5938;
+  }
   &__content {
     justify-content: space-around;
     width: 55%;
@@ -877,12 +943,20 @@ canvas {
     text-decoration: none;
     color: #C7C0B8;
   }
+  &__logo{
+    &--color{
+      & img{
+        filter: brightness(0.1);
+      }
+    }
+  }
 }
 
 @media screen and(max-width: 1440px) {
   .header:after {
     right: 7%;
   }
+
   .wrapper__image {
     width: 84%;
   }
@@ -920,9 +994,11 @@ canvas {
   .block__col {
     grid-template-columns: 40px 60px 250px 250px 250px 10px;
   }
+
   .wrapper__image {
     top: 24%;
   }
+
   .content-container {
     width: 92%;
   }
@@ -974,6 +1050,7 @@ canvas {
   .block__line {
     display: none;
   }
+
   .wrapper__image {
     top: 34%;
   }
@@ -1030,9 +1107,11 @@ canvas {
   .header__heading {
     padding: 20px 0;
   }
+
   .wrapper__image {
     display: none;
   }
+
   .header__item {
     margin-right: 25px;
   }
@@ -1104,7 +1183,9 @@ canvas {
   .header {
     margin-bottom: 0;
   }
-
+  .work__button {
+    top: -23%;
+  }
   .header__heading {
     padding: 0;
     margin-bottom: 90px;
@@ -1179,5 +1260,22 @@ canvas {
 
   .clients {
     margin-bottom: 60px;
+  }
+
+  .header__logo {
+    left: 1%;
+    width: 12%;
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+.content-color {
+  &--white {
+    color: #ECE9E9;
+  }
+  &--gray {
+    color: #E5E5E5;
   }
 }
