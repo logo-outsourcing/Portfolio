@@ -658,6 +658,9 @@ html.has-scroll-dragging {
     color: #727272;
     &--font {
       font-family: "Zamenhof Plain";
+      &:hover {
+        font-family: "Zamenhof Outline";
+      }
     }
     &--color {
       color: #EB5938;
@@ -672,6 +675,10 @@ html.has-scroll-dragging {
     text-decoration: none;
     display: inline-block;
     margin-bottom: 20px;
+    &:hover {
+      font-family: "Zamenhof Plain";
+      color: #333333;
+    }
   }
   &__button {
     display: block;
@@ -687,8 +694,8 @@ html.has-scroll-dragging {
 }
 
 .is-inview.work__button {
-  width: 50px;
-  left: -25px;
+  width: 35px;
+  left: -10px;
 }
 
 .clients {
@@ -804,7 +811,7 @@ html.has-scroll-dragging {
         filter: grayscale(0);
       }
     }
-    &--color{
+    &--color {
       filter: none;
     }
   }
@@ -923,7 +930,7 @@ html.has-scroll-dragging {
 .footer {
   background: #201D1E;
   min-height: 30vh;
-  &__color{
+  &__color {
     background: #EB5938;
   }
   &__content {
@@ -943,9 +950,9 @@ html.has-scroll-dragging {
     text-decoration: none;
     color: #C7C0B8;
   }
-  &__logo{
-    &--color{
-      & img{
+  &__logo {
+    &--color {
+      & img {
         filter: brightness(0.1);
       }
     }
@@ -1183,9 +1190,11 @@ html.has-scroll-dragging {
   .header {
     margin-bottom: 0;
   }
+
   .work__button {
     top: -23%;
   }
+
   .header__heading {
     padding: 0;
     margin-bottom: 90px;
@@ -1277,5 +1286,96 @@ html.has-scroll-dragging {
   }
   &--gray {
     color: #E5E5E5;
+  }
+}
+
+.ghost {
+  position: absolute;
+  z-index: 1;
+  // filter:url('#goo');
+  transform-origin: center;
+  width: 90px;
+  margin: 20px 0 0 -45px;
+  display: none;
+  &--open {
+    display: block;
+  }
+  &--svg {
+    position: absolute;
+  }
+  &__eyes,
+  &__mouth {
+    position: absolute;
+    z-index: 1;
+    width: 15px;
+    height: 15px;
+    top: 34px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50px;
+    background: #161616;
+    margin-left: -20px;
+    transform-origin: center;
+  }
+
+  &__eyes {
+    box-shadow: 40px 0 0 #161616;
+  }
+
+  &__mouth {
+    margin: 0;
+    top: 60px;
+    transform: scale(0);
+    border-radius: 20px 20px 12px 12px;
+    width: 20px;
+    trasform-origin: center bottom;
+    overflow: hidden;
+  }
+
+  &__tail {
+    position: absolute;
+    z-index: -1;
+    top: 82px;
+    height: 55px;
+    width: 100%;
+    filter: url(#goo);
+
+    &:before {
+      content: '';
+      background: #fff;
+      position: absolute;
+      bottom: 35px;
+      left: 0;
+      height: 100px;
+      width: 100%;
+      border-radius: 40px 40px 5px 5px;
+    }
+  }
+
+  &__rip {
+    width: 15px;
+    height: 28px;
+    background: #fff;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    box-shadow: -62px 0 0 #fff, -31px 0 0 #fff, 31px 0 0 #fff, 62px 0 0 #fff, 93px 0 0 #fff;
+    border-radius: 50%;
+    animation: ghost-rips 1.2s linear infinite;
+  }
+}
+
+@keyframes ghost-rips {
+  0% {
+    left: 0;
+    top: 12px;
+  }
+  50% {
+    left: 31px;
+    top: 20px;
+  }
+  100% {
+    left: 62px;
+    top: 12px;
   }
 }
