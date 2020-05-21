@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>Возчиков Сергей – UX/UI Designer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
     <link rel="stylesheet" href="style/css/reset.css">
     <link rel="stylesheet" href="style/css/style.css?ver=13">
     <link rel="icon" href="img/logo.svg">
@@ -29,16 +30,16 @@
                     <a href="index.html" class="header__logo"><img src="img/logo-white.svg" alt="logo"></a>
                     <ul class="content-row header__menu">
                         <li class="header__item">
-                            <a class="header__link motion__header--link"  href="index.html">главная</a>
+                            <a class="header__link motion__header--link" href="index.html">главная</a>
                         </li>
                         <li class="header__item">
-                            <a class="header__link motion__header--link"  href="index.html">обо мне</a>
+                            <a class="header__link motion__header--link" href="index.html">обо мне</a>
                         </li>
                         <li class="header__item">
-                            <a class="header__link  motion__header--link"  href="index.html">работы</a>
+                            <a class="header__link  motion__header--link" href="index.html">работы</a>
                         </li>
                         <li class="header__item">
-                            <a class="header__link  motion__header--link"  href="index.html">контакты</a>
+                            <a class="header__link  motion__header--link" href="index.html">контакты</a>
                         </li>
                     </ul>
                 </div>
@@ -47,37 +48,161 @@
         <section data-scroll data-scroll-section>
             <div class="content-container">
                 <div class="motion__content">
-                    <div class="motion__heading" id="block">
+                    <div class="motion__heading" id="block" data-scroll data-scroll-speed="2"
+                         data-scroll-position="top">
                         <canvas id="canvas"></canvas>
-                        <p class="motion__heading--text">Move the mouse!</p>
                     </div>
-                    <div class="motion__line">
+                    <div class="motion__line" data-scroll data-scroll-speed="2"
+                         data-scroll-position="top">
                         <p class="motion__quote"><span
                                 class="motion__quote--color"> “Мир анимации и моушн графики</span>
                             — это океан возможностей
                             и перспектив. Существует множество разных стилистик, разных направлений анимации”</p>
                     </div>
-                    <div class="motion__line">
-                        <div class="content-row">
-                            <div>
+                    <div class="motion__line" >
+                        <div class="content-row motion__element">
+                            <div class="motion__info">
                                 <p class="motion__promo">promo<span class="motion__promo--data">2019</span></p>
-                                <h3 class="motion__name">Активный
+                                <h3 class="motion__name" >Активный
                                     гражданин</h3>
                             </div>
+                            <a data-fancybox href="#video1" class="motion__player">
+                                <video tabindex="0" preload class="motion__video">
+                                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"
+                                            src="video/Video-promo1.mp4">
+                                </video>
+                                <video id="video1" controls tabindex="0" preload class="motion__video--big">
+                                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"
+                                            src="video/Video1.mp4">
+                                </video>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="motion__line" >
+                        <div class="content-row motion__element">
+                            <div class="motion__info">
+                                <p class="motion__promo">promo<span class="motion__promo--data">2019</span></p>
+                                <h3 class="motion__name" >Активный
+                                    гражданин</h3>
+                            </div>
+                            <a data-fancybox href="#video2" class="motion__player">
+                                <video tabindex="0" preload class="motion__video">
+                                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"
+                                            src="video/Video-promo1.mp4">
+                                </video>
+                                <video id="video2" controls tabindex="0" preload class="motion__video--big">
+                                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"
+                                            src="video/Video1.mp4">
+                                </video>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="motion__line" >
+                        <div class="content-row motion__element">
+                            <div class="motion__info">
+                                <p class="motion__promo">promo<span class="motion__promo--data">2019</span></p>
+                                <h3 class="motion__name" >Активный
+                                    гражданин</h3>
+                            </div>
+                            <a data-fancybox href="#video3" class="motion__player">
+                                <video tabindex="0" preload class="motion__video">
+                                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"
+                                            src="video/Video-promo1.mp4">
+                                </video>
+                                <video id="video3" controls tabindex="0" preload class="motion__video--big">
+                                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"
+                                            src="video/Video1.mp4">
+                                </video>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="motion__line" >
+                        <div class="content-row motion__element">
+                            <div class="motion__info">
+                                <p class="motion__promo">promo<span class="motion__promo--data">2019</span></p>
+                                <h3 class="motion__name" >Активный
+                                    гражданин</h3>
+                            </div>
+                            <a data-fancybox href="#video4" class="motion__player">
+                                <video tabindex="0" preload class="motion__video">
+                                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"
+                                            src="video/Video-promo1.mp4">
+                                </video>
+                                <video id="video4" controls tabindex="0" preload class="motion__video--big">
+                                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"
+                                            src="video/Video1.mp4">
+                                </video>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="motion__line" >
+                        <div class="content-row motion__element">
+                            <div class="motion__info">
+                                <p class="motion__promo">promo<span class="motion__promo--data">2019</span></p>
+                                <h3 class="motion__name" >Активный
+                                    гражданин</h3>
+                            </div>
+                            <a data-fancybox href="#video5" class="motion__player">
+                                <video tabindex="0" preload class="motion__video">
+                                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"
+                                            src="video/Video-promo1.mp4">
+                                </video>
+                                <video id="video5" controls tabindex="0" preload class="motion__video--big">
+                                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"
+                                            src="video/Video1.mp4">
+                                </video>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="motion__line" >
+                        <div class="content-row motion__element" >
+                            <div class="motion__info">
+                                <p class="motion__promo">promo<span class="motion__promo--data">2019</span></p>
+                                <h3 class="motion__name" >Активный
+                                    гражданин</h3>
+                            </div>
+                            <a data-fancybox href="#video6" class="motion__player">
+                                <video tabindex="0" preload class="motion__video">
+                                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"
+                                            src="video/Video-promo1.mp4">
+                                </video>
+                                <video id="video6" controls tabindex="0" preload class="motion__video--big">
+                                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"
+                                            src="video/Video1.mp4">
+                                </video>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="motion__line" >
+                        <div class="content-row motion__element" >
+                            <div class="motion__info">
+                                <p class="motion__promo">promo<span class="motion__promo--data">2019</span></p>
+                                <h3 class="motion__name" >Активный
+                                    гражданин</h3>
+                            </div>
+                            <a data-fancybox href="#video7" class="motion__player">
+                                <video tabindex="0" preload class="motion__video">
+                                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"
+                                            src="video/Video-promo1.mp4">
+                                </video>
+                                <video id="video7" controls tabindex="0" preload class="motion__video--big">
+                                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"
+                                            src="video/Video1.mp4">
+                                </video>
+                            </a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
-
     </div>
-    <footer class="footer"  data-scroll-section>
-        <div class="content-container " >
+    <footer class="footer" data-scroll-section data-scroll data-scroll-speed="2"
+            data-scroll-position="top">
+        <div class="content-container ">
             <div class="content-row footer__content">
                 <a href="https://www.instagram.com/alex_wood_tms/?hl=ru" class="footer__link"
-                   target="_blank"  >instagram</a>
-                <a href="#header"  ><img src="img/logo-white.svg" alt="logo"></a>
+                   target="_blank">instagram</a>
+                <a href="#header"><img src="img/logo-white.svg" alt="logo"></a>
                 <a href="https://telegram.im/@verss" target="_blank" class="footer__link">telegram</a>
             </div>
 
@@ -90,6 +215,7 @@
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.4.4/dist/locomotive-scroll.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.1-rc2/lazysizes.min.js" async=""></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 <script src="js/vector.js"></script>
 <script src="js/motion.js"></script>

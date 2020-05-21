@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
     $('.work__button').on('click', function () {
-        console.log(1);
         $('.content-wrapper').toggleClass('content-wrapper--color');
         $('.header__link').toggleClass('header__link--color');
         $('.header__logo').toggleClass('header__logo--color');

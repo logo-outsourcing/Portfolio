@@ -30,7 +30,6 @@
     margin: 0 auto 65px;
     &--color {
       color: #D34E49;
-      display: block;
     }
 
   }
@@ -54,19 +53,29 @@
   &__content {
     margin-left: 10%;
   }
-  &__promo{
+  &__element {
+    justify-content: space-between;
+    margin-bottom: 67px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__promo {
     font-family: "Zamenhof Outline";
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
     line-height: 30px;
     color: #EB5938;
-    &--data{
+    &--data {
       color: #C7C0B8;
       margin-left: 30px;
     }
   }
-  &__name{
+  &__name {
     font-family: "Zamenhof Plain";
     font-style: normal;
     font-weight: normal;
@@ -75,6 +84,17 @@
     display: flex;
     align-items: center;
     color: #FFFFFF;
+  }
+  &__player {
+    width: 56%;
+    display: block;
+  }
+  &__video {
+    width: 100%;
+    &--big {
+      display: none;
+      width: 100%;
+    }
   }
 }
 
@@ -95,4 +115,45 @@
   cursor: crosshair;
   display: block;
   height: 100%;
+}
+
+@media screen and (max-width: 990px) {
+  .motion__content {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .motion .motion__element {
+    flex-direction: column;
+  }
+
+  .motion__promo {
+    margin-bottom: 25px;
+  }
+
+  .motion__name {
+    margin-bottom: 25px;
+  }
+
+  .motion__player {
+    width: 100%;
+  }
+  .motion__line {
+    margin-left: 0;
+    width: 100%;
+  }
+  .motion__heading {
+    height: 375px;
+  }
+}
+@media screen and (max-width: 576px){
+  .motion__quote {
+    font-size: 32px;
+    line-height: 45px;
+    width: 100%;
+  }
+  .motion__heading {
+    height: 250px;
+  }
 }
