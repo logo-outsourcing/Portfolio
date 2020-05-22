@@ -13,6 +13,7 @@ $(document).ready(function () {
         $('.clients__image--mega').toggleClass('clients__image--color');
         $('.footer').toggleClass('footer__color');
         $('.footer__logo').toggleClass('footer__logo--color');
+        $('.lampadario').toggleClass('lampadario--open');
         //Get Mouse
 
         let mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2, dir: '' };
@@ -102,6 +103,23 @@ $(document).ready(function () {
             cursor1.follow();
         }
         render();
+    });
+    $('.lampadario__label').on('click', function () {
+        $('.ghost').toggleClass('ghost--open');
+        $('.content-wrapper').toggleClass('content-wrapper--color');
+        $('.header__link').toggleClass('header__link--color');
+        $('.header__logo').toggleClass('header__logo--color');
+        $('.header__title--element').toggleClass('header__title--color');
+        $('.color-white').toggleClass('content-color--white');
+        $('.color-gray').toggleClass('content-color--gray');
+        $('.contact__inner').toggleClass('contact__inner--color');
+        $('.clients__image').toggleClass('clients__image--color');
+        $('.clients__image--mega').toggleClass('clients__image--color');
+        $('.footer').toggleClass('footer__color');
+        $('.footer__logo').toggleClass('footer__logo--color');
+        $('.lampadario').toggleClass('lampadario--open');
+        //Get Mouse
+
     });
     $('.content-site').removeClass('hidden');
     setTimeout(function () {
