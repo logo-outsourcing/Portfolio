@@ -14,6 +14,7 @@ $(document).ready(function () {
         $('.footer').toggleClass('footer__color');
         $('.footer__logo').toggleClass('footer__logo--color');
         $('.lampadario').toggleClass('lampadario--open');
+        $('.work__button').toggleClass('work__button--close');
         //Get Mouse
 
         let mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2, dir: '' };
@@ -118,6 +119,7 @@ $(document).ready(function () {
         $('.footer').toggleClass('footer__color');
         $('.footer__logo').toggleClass('footer__logo--color');
         $('.lampadario').toggleClass('lampadario--open');
+        $('.work__button').toggleClass('work__button--close');
         //Get Mouse
 
     });

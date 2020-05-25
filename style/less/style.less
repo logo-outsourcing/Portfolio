@@ -690,6 +690,9 @@ html.has-scroll-dragging {
     top: 330px;
     cursor: pointer;
     transition: all 0s, width .5s cubic-bezier(.215, .61, .355, 1), left .5s cubic-bezier(.215, .61, .355, 1);
+    &--close {
+      display: none;
+    }
   }
   &__wrapper {
     --text-color: #333333;
@@ -978,6 +981,7 @@ html.has-scroll-dragging {
     color: #201D1E;
   }
 }
+
 @keyframes fill-text-color {
   0% {
     clip-path: var(--fill-from);
@@ -1676,17 +1680,17 @@ html.has-scroll-dragging {
   }
 }
 
-
 .lampadario {
   position: fixed;
-  left: 50%;
+  left: 21%;
   top: 0;
   display: none;
   z-index: 999;
-  &--open{
+  &--open {
     display: block;
   }
 }
+
 #filo {
   position: relative;
   background-color: #000000;
@@ -1706,6 +1710,7 @@ html.has-scroll-dragging {
   -o-animation: oscillaFilo .9s ease-in-out 0s infinite alternate;
   animation: oscillaFilo .9s ease-in-out 0s infinite alternate;
 }
+
 #filo:after {
   content: " ";
   left: -5px;
@@ -1717,24 +1722,27 @@ html.has-scroll-dragging {
   height: 0;
   width: 4px;
 }
+
 #lampadina {
-  position:relative;
+  position: relative;
 }
+
 .lampadario__input[value="off"]:checked ~
 #filo {
-  -webkit-box-shadow: -80px -10px 7px 0 rgba(0,0,0,0.1);
-  -moz-box-shadow: -80px -10px 7px 0 rgba(0,0,0,0.1);
-  -ms-box-shadow: -80px -10px 7px 0 rgba(0,0,0,0.1);
-  -o-box-shadow: -80px -10px 7px 0 rgba(0,0,0,0.1);
-  box-shadow: -80px -10px 7px 0 rgba(0,0,0,0.1);
+  -webkit-box-shadow: -80px -10px 7px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -80px -10px 7px 0 rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: -80px -10px 7px 0 rgba(0, 0, 0, 0.1);
+  -o-box-shadow: -80px -10px 7px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: -80px -10px 7px 0 rgba(0, 0, 0, 0.1);
 }
+
 .lampadario__input[value="off"]:checked ~
 #filo:after {
-  -webkit-box-shadow: -80px -10px 10px -2px rgba(0,0,0,0.1);
-  -moz-box-shadow: -80px -10px 10px -2px rgba(0,0,0,0.1);
-  -ms-box-shadow: -80px -10px 10px -2px rgba(0,0,0,0.1);
-  -o-box-shadow: -80px -10px 10px -2px rgba(0,0,0,0.1);
-  box-shadow: -80px -10px 10px -2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: -80px -10px 10px -2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -80px -10px 10px -2px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: -80px -10px 10px -2px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: -80px -10px 10px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: -80px -10px 10px -2px rgba(0, 0, 0, 0.1);
 }
 
 .lampadario__input {
@@ -1742,7 +1750,7 @@ html.has-scroll-dragging {
   width: 90px;
   height: 70px;
   top: 150px;
-  margin-left:-45px;
+  margin-left: -45px;
   opacity: 0;
   z-index: 1;
   cursor: pointer;
@@ -1751,12 +1759,15 @@ html.has-scroll-dragging {
 .lampadario__input[value="on"] {
   top: 150px;
 }
+
 .lampadario__input[value="off"] {
   top: -100px;
 }
+
 .lampadario__input[value="on"]:checked {
   top: -100px;
 }
+
 .lampadario__input[value="on"]:checked + input[value="off"] {
   top: 150px;
 }
@@ -1780,23 +1791,25 @@ html.has-scroll-dragging {
   -o-animation: oscillaLampadina .9s ease-in-out 0s infinite alternate;
   animation: oscillaLampadina .9s ease-in-out 0s infinite alternate;
 }
+
 .lampadario__input[value="off"]:checked ~
 .lampadario__label {
-  background: rgba(255,255,255,0.03);
-  -webkit-box-shadow: inset 0px 1px 5px rgba(255,255,255,0.1), inset 0px 2px 20px rgba(255,255,255,0.07), -80px -15px 15px -5px rgba(0,0,0,0.1);
-  -moz-box-shadow: inset 0px 1px 5px rgba(255,255,255,0.1), inset 0px 2px 20px rgba(255,255,255,0.07), -80px -15px 15px -5px rgba(0,0,0,0.1);
-  -ms-box-shadow: inset 0px 1px 5px rgba(255,255,255,0.1), inset 0px 2px 20px rgba(255,255,255,0.07), -80px -15px 15px -5px rgba(0,0,0,0.1);
-  -o-box-shadow: inset 0px 1px 5px rgba(255,255,255,0.1), inset 0px 2px 20px rgba(255,255,255,0.07), -80px -15px 15px -5px rgba(0,0,0,0.1);
-  box-shadow: inset 0px 1px 5px rgba(255,255,255,0.1), inset 0px 2px 20px rgba(255,255,255,0.07), -80px -15px 15px -5px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.03);
+  -webkit-box-shadow: inset 0px 1px 5px rgba(255, 255, 255, 0.1), inset 0px 2px 20px rgba(255, 255, 255, 0.07), -80px -15px 15px -5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0px 1px 5px rgba(255, 255, 255, 0.1), inset 0px 2px 20px rgba(255, 255, 255, 0.07), -80px -15px 15px -5px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: inset 0px 1px 5px rgba(255, 255, 255, 0.1), inset 0px 2px 20px rgba(255, 255, 255, 0.07), -80px -15px 15px -5px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: inset 0px 1px 5px rgba(255, 255, 255, 0.1), inset 0px 2px 20px rgba(255, 255, 255, 0.07), -80px -15px 15px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 1px 5px rgba(255, 255, 255, 0.1), inset 0px 2px 20px rgba(255, 255, 255, 0.07), -80px -15px 15px -5px rgba(0, 0, 0, 0.1);
 }
+
 .lampadario__input[value="on"]:checked ~
 .lampadario__label {
-  background: rgba(255,255,255,1);
-  -webkit-box-shadow: 0px 0px 10px rgba(255,255,255,0.8), 0px 0px 30px rgba(255,255,255,0.8), 0px 0px 50px rgba(255,255,255,0.6), 0px 0px 70px rgba(255,255,255,0.6), -80px -15px 120px 0px rgba(255,255,255,0.4);
-  -moz-box-shadow: 0px 0px 10px rgba(255,255,255,0.8), 0px 0px 30px rgba(255,255,255,0.8), 0px 0px 50px rgba(255,255,255,0.6), 0px 0px 70px rgba(255,255,255,0.6), -80px -15px 120px 0px rgba(255,255,255,0.4);
-  -ms-box-shadow: 0px 0px 10px rgba(255,255,255,0.8), 0px 0px 30px rgba(255,255,255,0.8), 0px 0px 50px rgba(255,255,255,0.6), 0px 0px 70px rgba(255,255,255,0.6), -80px -15px 120px 0px rgba(255,255,255,0.4);
-  -o-box-shadow: 0px 0px 10px rgba(255,255,255,0.8), 0px 0px 30px rgba(255,255,255,0.8), 0px 0px 50px rgba(255,255,255,0.6), 0px 0px 70px rgba(255,255,255,0.6), -80px -15px 120px 0px rgba(255,255,255,0.4);
-  box-shadow: 0px 0px 10px rgba(255,255,255,0.8), 0px 0px 30px rgba(255,255,255,0.8), 0px 0px 50px rgba(255,255,255,0.6), 0px 0px 70px rgba(255,255,255,0.6), -80px -15px 120px 0px rgba(255,255,255,0.4);
+  background: rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8), 0px 0px 30px rgba(255, 255, 255, 0.8), 0px 0px 50px rgba(255, 255, 255, 0.6), 0px 0px 70px rgba(255, 255, 255, 0.6), -80px -15px 120px 0px rgba(255, 255, 255, 0.4);
+  -moz-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8), 0px 0px 30px rgba(255, 255, 255, 0.8), 0px 0px 50px rgba(255, 255, 255, 0.6), 0px 0px 70px rgba(255, 255, 255, 0.6), -80px -15px 120px 0px rgba(255, 255, 255, 0.4);
+  -ms-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8), 0px 0px 30px rgba(255, 255, 255, 0.8), 0px 0px 50px rgba(255, 255, 255, 0.6), 0px 0px 70px rgba(255, 255, 255, 0.6), -80px -15px 120px 0px rgba(255, 255, 255, 0.4);
+  -o-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8), 0px 0px 30px rgba(255, 255, 255, 0.8), 0px 0px 50px rgba(255, 255, 255, 0.6), 0px 0px 70px rgba(255, 255, 255, 0.6), -80px -15px 120px 0px rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8), 0px 0px 30px rgba(255, 255, 255, 0.8), 0px 0px 50px rgba(255, 255, 255, 0.6), 0px 0px 70px rgba(255, 255, 255, 0.6), -80px -15px 120px 0px rgba(255, 255, 255, 0.4);
 }
 
 .lampadario__input[value="off"]:checked ~
@@ -1813,18 +1826,21 @@ html.has-scroll-dragging {
   -ms-border-radius: 100%;
   -o-border-radius: 100%;
   border-radius: 100%;
-  border: 2px solid rgba(255,255,255,0.03);
+  border: 2px solid rgba(255, 255, 255, 0.03);
 }
+
 #sorpresa {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
+
 .lampadario__input[value="off"]:checked ~
 #lampadina #sorpresa {
   opacity: 0;
 }
+
 .lampadario__input[value="on"]:checked ~
 #lampadina #sorpresa {
   opacity: 1;
@@ -1832,108 +1848,135 @@ html.has-scroll-dragging {
 
 @-webkit-keyframes oscillaFilo {
   from {
-    -webkit-transform:rotate(5deg);
-  } to {
-      -webkit-transform:rotate(-5deg);
-    }
+    -webkit-transform: rotate(5deg);
+  }
+  to {
+    -webkit-transform: rotate(-5deg);
+  }
 }
+
 @-moz-keyframes oscillaFilo {
   from {
-    -moz-transform:rotate(5deg);
-  } to {
-      -moz-transform:rotate(-5deg);
-    }
+    -moz-transform: rotate(5deg);
+  }
+  to {
+    -moz-transform: rotate(-5deg);
+  }
 }
+
 @-ms-keyframes oscillaFilo {
   from {
-    -ms-transform:rotate(5deg);
-  } to {
-      -ms-transform:rotate(-5deg);
-    }
+    -ms-transform: rotate(5deg);
+  }
+  to {
+    -ms-transform: rotate(-5deg);
+  }
 }
+
 @-o-keyframes oscillaFilo {
   from {
-    -o-transform:rotate(5deg);
-  } to {
-      -o-transform:rotate(-5deg);
-    }
+    -o-transform: rotate(5deg);
+  }
+  to {
+    -o-transform: rotate(-5deg);
+  }
 }
+
 @keyframes oscillaFilo {
   from {
-    transform:rotate(5deg);
-  } to {
-      transform:rotate(-5deg);
-    }
+    transform: rotate(5deg);
+  }
+  to {
+    transform: rotate(-5deg);
+  }
 }
 
 @-webkit-keyframes oscillaLampadina {
   from {
-    -webkit-transform: rotate(3deg) translate(-16.4px,-1px);
-  } to {
-      -webkit-transform: rotate(-3deg) translate(16.4px,-1px);
-    }
+    -webkit-transform: rotate(3deg) translate(-16.4px, -1px);
+  }
+  to {
+    -webkit-transform: rotate(-3deg) translate(16.4px, -1px);
+  }
 }
+
 @-moz-keyframes oscillaLampadina {
   from {
-    -moz-transform: rotate(3deg) translate(-16.4px,-1px);
-  } to {
-      -moz-transform: rotate(-3deg) translate(16.4px,-1px);
-    }
+    -moz-transform: rotate(3deg) translate(-16.4px, -1px);
+  }
+  to {
+    -moz-transform: rotate(-3deg) translate(16.4px, -1px);
+  }
 }
+
 @-ms-keyframes oscillaLampadina {
   from {
-    -ms-transform: rotate(3deg) translate(-16.4px,-1px);
-  } to {
-      -ms-transform: rotate(-3deg) translate(16.4px,-1px);
-    }
+    -ms-transform: rotate(3deg) translate(-16.4px, -1px);
+  }
+  to {
+    -ms-transform: rotate(-3deg) translate(16.4px, -1px);
+  }
 }
+
 @-o-keyframes oscillaLampadina {
   from {
-    -o-transform: rotate(3deg) translate(-16.4px,-1px);
-  } to {
-      -o-transform: rotate(-3deg) translate(16.4px,-1px);
-    }
+    -o-transform: rotate(3deg) translate(-16.4px, -1px);
+  }
+  to {
+    -o-transform: rotate(-3deg) translate(16.4px, -1px);
+  }
 }
+
 @keyframes oscillaLampadina {
   from {
-    transform: rotate(3deg) translate(-16.4px,-1px);
-  } to {
-      transform: rotate(-3deg) translate(16.4px,-1px);
-    }
+    transform: rotate(3deg) translate(-16.4px, -1px);
+  }
+  to {
+    transform: rotate(-3deg) translate(16.4px, -1px);
+  }
 }
 
 @-webkit-keyframes ombraTesto {
   from {
-    -webkit-transform: translate(1px,0px) scale(1.01,1.06) skew(0.9deg, 0deg);
-  } to {
-      -webkit-transform: translate(-1px,0px) scale(1.01,1.06) skew(-0.9deg, 0deg);
-    }
+    -webkit-transform: translate(1px, 0px) scale(1.01, 1.06) skew(0.9deg, 0deg);
+  }
+  to {
+    -webkit-transform: translate(-1px, 0px) scale(1.01, 1.06) skew(-0.9deg, 0deg);
+  }
 }
+
 @-moz-keyframes ombraTesto {
   from {
-    -moz-transform: translate(1px,0px) scale(1.01,1.06) skew(0.9deg, 0deg);
-  } to {
-      -moz-transform: translate(-1px,0px) scale(1.01,1.06) skew(-0.9deg, 0deg);
-    }
+    -moz-transform: translate(1px, 0px) scale(1.01, 1.06) skew(0.9deg, 0deg);
+  }
+  to {
+    -moz-transform: translate(-1px, 0px) scale(1.01, 1.06) skew(-0.9deg, 0deg);
+  }
 }
+
 @-ms-keyframes ombraTesto {
   from {
-    -ms-transform: translate(1px,0px) scale(1.01,1.06) skew(0.9deg, 0deg);
-  } to {
-      -ms-transform: translate(-1px,0px) scale(1.01,1.06) skew(-0.9deg, 0deg);
-    }
+    -ms-transform: translate(1px, 0px) scale(1.01, 1.06) skew(0.9deg, 0deg);
+  }
+  to {
+    -ms-transform: translate(-1px, 0px) scale(1.01, 1.06) skew(-0.9deg, 0deg);
+  }
 }
+
 @-o-keyframes ombraTesto {
   from {
-    -o-transform: translate(1px,0px) scale(1.01,1.06) skew(0.9deg, 0deg);
-  } to {
-      -o-transform: translate(-1px,0px) scale(1.01,1.06) skew(-0.9deg, 0deg);
-    }
+    -o-transform: translate(1px, 0px) scale(1.01, 1.06) skew(0.9deg, 0deg);
+  }
+  to {
+    -o-transform: translate(-1px, 0px) scale(1.01, 1.06) skew(-0.9deg, 0deg);
+  }
 }
+
 @keyframes ombraTesto {
   from {
-    transform: translate(1px,0px) scale(1.01,1.06) skew(0.9deg, 0deg);
-  } to {
-      transform: translate(-1px,0px) scale(1.01,1.06) skew(-0.9deg, 0deg);
-    }
+    transform: translate(1px, 0px) scale(1.01, 1.06) skew(0.9deg, 0deg);
+  }
+  to {
+    transform: translate(-1px, 0px) scale(1.01, 1.06) skew(-0.9deg, 0deg);
+  }
 }
