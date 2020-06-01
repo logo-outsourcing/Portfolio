@@ -118,7 +118,7 @@ $(document).ready(function () {
         let fontSize = w * 0.3;
         ctx.font = "bold " + fontSize + "px Arial, Helvetica, sans-serif";
         ctx.textAlign = "center";
-        ctx.textBaseline = "middle"
+        ctx.textBaseline = "middle";
         ctx.lineWidth = 1;
         ctx.strokeStyle = "white";
         ctx.strokeText(config.text, w / 2, h / 2);
