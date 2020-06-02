@@ -181,10 +181,10 @@ $(document).ready(function () {
     draw(1);
 
 
-    // var figure = $(".motion__player").hover( hoverVideo, hideVideo );
-    //
-    // function hoverVideo(e) { $('video', this).get(0).play(); }
-    // function hideVideo(e) { $('video', this).get(0).pause(); }
+    var figure = $(".motion__player").hover( hoverVideo, hideVideo );
+
+    function hoverVideo(e) { $('video', this).get(0).play(); }
+    function hideVideo(e) { $('video', this).get(0).pause(); }
 
     $('[data-fancybox]').fancybox({
         youtube : {
