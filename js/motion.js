@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    setTimeout(function () {
     const config = {
         text: "motion",
         widthToSpikeLengthRatio: 0.054
@@ -179,7 +180,7 @@ $(document).ready(function () {
 
     setup();
      draw(1);
-
+    }, 100);
 
     var figure = $(".motion__player").hover( hoverVideo, hideVideo );
 
