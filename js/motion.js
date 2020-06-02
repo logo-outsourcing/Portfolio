@@ -8,7 +8,7 @@ $(document).ready(function () {
         particleOpacity: 0.2,
         baseHue: 350,
         hueRange: 9,
-        hueSpeed: 0.04,
+        hueSpeed: 0.01,
         colorSaturation: 100,
     };
 
@@ -19,10 +19,10 @@ $(document).ready(function () {
         }
 
         draw() {
-            ctx.fillStyle = "#AAA";
-            ctx.beginPath();
-            ctx.arc(this.pos.x, this.pos.y, 8, 0, Math.PI * 2);
-            ctx.fill();
+            // ctx.fillStyle = "#AAA";
+            // ctx.beginPath();
+            // ctx.arc(this.pos.x, this.pos.y, 8, 0, Math.PI * 2);
+            // ctx.fill();
         }
     }
 
@@ -161,7 +161,7 @@ $(document).ready(function () {
         let h = Math.sin(hue) * colorConfig.hueRange + colorConfig.baseHue;
         ctx.strokeStyle = `hsla(${h}, ${colorConfig.colorSaturation}%, 50%, ${colorConfig.particleOpacity})`;
         particles.forEach(p => {
-            // Apply the force of each planet (repeller) to the current particle
+            //Apply the force of each planet (repeller) to the current particle
             planets.forEach(planet => {
                 let d = p.pos.sub(planet.pos);
                 let length = d.getLength();
