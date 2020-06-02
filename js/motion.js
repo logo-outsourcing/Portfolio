@@ -178,7 +178,7 @@ $(document).ready(function () {
     }
 
     setup();
-//     draw(1);
+     draw(1);
 
 
     var figure = $(".motion__player").hover( hoverVideo, hideVideo );
