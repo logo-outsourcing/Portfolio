@@ -50,7 +50,34 @@
                 <div class="motion__content">
                     <div class="motion__heading" id="block" data-scroll data-scroll-speed="2"
                          data-scroll-position="top">
-                        <canvas id="canvas"></canvas>
+                        <div class="container">
+                            <div class="page">
+                                <div class="glitch glitch--10" data-scroll="out" data-splitting="">MOTION</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                    <defs>
+                                        <filter id="glitch" x="0" y="0">
+                                            <feColorMatrix in="SourceGraphic" mode="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r" />
+
+                                            <feOffset in="r" result="r" dx="-5">
+                                                <animate attributeName="dx" attributeType="XML" values="0; -2; 0; -18; -2; -4; 0 ;-1; 0" dur="1s" repeatCount="indefinite"/>
+                                            </feOffset>
+                                            <feColorMatrix in="SourceGraphic" mode="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"/>
+                                            <feOffset in="g" result="g" dx="-5" dy="1">
+                                                <animate attributeName="dx" attributeType="XML" values="0; 0; 0; -3; 0; 8; 0 ;-1; 0" dur="2s" repeatCount="indefinite"/>
+                                            </feOffset>
+                                            <feColorMatrix in="SourceGraphic" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"/>
+                                            <feOffset in="b" result="b" dx="5" dy="2">
+                                                <animate attributeName="dx" attributeType="XML" values="0; 3; -1; 4; 0; 2; 0 ;18; 0" dur="4s" repeatCount="indefinite"/>
+                                            </feOffset>
+                                            <feBlend in="r" in2="g" mode="screen" result="blend" />
+                                            <feBlend in="blend" in2="b" mode="screen" result="blend" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+                            </div>
+
+                        </div>
+                        <!--<canvas id="canvas"></canvas>-->
                     </div>
                     <div class="motion__line" data-scroll data-scroll-speed="2"
                          data-scroll-position="top">
@@ -210,6 +237,9 @@
 <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.4.4/dist/locomotive-scroll.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://unpkg.com/splitting/dist/splitting.js"></script>
 <script src="js/vector.js"></script>
 <script src="js/motion.js?ver=3"></script>
 <script src="js/main.js"></script>
